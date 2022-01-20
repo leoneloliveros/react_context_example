@@ -9,13 +9,11 @@ import {ComponentC} from './ComponentC'
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider>
     <NumberProvider value={0}>
       <App />
     </NumberProvider>
     
       <ComponentC />
-    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
