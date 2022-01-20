@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { NumberProvider } from './NumberContext'
+import {ComponentC} from './ComponentC'
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider>
+    <NumberProvider value={0}>
+      <App />
+    </NumberProvider>
+    
+      <ComponentC />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
